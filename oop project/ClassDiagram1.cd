@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="oop_project.Admin" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAACEBAKSCQACQCBDAAJJAAAAAAAQAAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.Form1" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAACACAAACQAAQCBAAABBAAAAAAAQAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.Guest" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACRCAACAAAAQCQAAQCBBAAJJAgAAEAAAEAAAI=</HashCode>
+      <FileName>Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.GuestReport" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAggAAAgACAAAFQBAACBCIACAIBAIAFAAAgDAEhBCAA=</HashCode>
+      <FileName>GuestReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.GuestRequest" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9QggACIgFCAAABQBAACCAIACAIBAIAFAABADAEhAAAA=</HashCode>
+      <FileName>GuestRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.GuestSearch" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8AigAIQKRCAAAJABAACBAoCKAEAAAgBACABAAAAAIAA=</HashCode>
+      <FileName>GuestSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.Main" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAQAACCAiBQAAACQAgUCBIBAFBAEAAACAAAAAAA=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.ReportFoundItem" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAggIAAgACAAABQAAACBCIACQIAAICFAAAgDAEhBCAA=</HashCode>
+      <FileName>ReportFoundItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.RequestRetrieval" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9wggAAIgBCAAAJQBAACCAIBCQIAIAAFCAFACAEhBAAA=</HashCode>
+      <FileName>RequestRetrieval.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.RetrievalRequests" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgCEIQKBCCgAAiSBACBQJKKAAAAIIBUABAAAACAAAA=</HashCode>
+      <FileName>RetrievalRequests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.SearchItem" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8AigAIQKBCAAABABAACBAgCKQEAAAABACAAEABAAIAQ=</HashCode>
+      <FileName>SearchItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.Student" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACQCAACAAAAQCQIAQCBBAAJJAgAAEAAAEAAAI=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_project.View" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIQKBKAgAAASAACBQJKKAAAAIIBEAAEAACCAAEA=</HashCode>
+      <FileName>View.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
