@@ -36,7 +36,6 @@ namespace oop_project
             int currentNumber = guestNumbers[firstLetter];
             string customId = $"{firstLetter}{currentNumber:D3}";
 
-            // Increment the guest number for this first letter
             guestNumbers[firstLetter]++;
 
             return customId;
@@ -56,7 +55,7 @@ namespace oop_project
             contactNum = tbxContact.Text;
     
             dateLost = dtpLost.Value.ToString("dd/MM/yyyy");
-            status = "PENDING"; // Default status
+            status = "PENDING"; 
 
             try
             {

@@ -202,6 +202,7 @@
             dgvLostItem.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLostItem.Location = new Point(486, 138);
             dgvLostItem.Name = "dgvLostItem";
+            dgvLostItem.ReadOnly = true;
             dgvLostItem.RowHeadersWidth = 51;
             dgvLostItem.Size = new Size(1103, 495);
             dgvLostItem.TabIndex = 78;

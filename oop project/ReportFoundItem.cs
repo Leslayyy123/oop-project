@@ -31,12 +31,9 @@
         private void ReportItem_Load(object sender, EventArgs e)
         {
             try
-            {   // Replace with the actual logged-in student's ID
+            {   
                 string queryGetStudentName = "SELECT StudentName FROM StudentInfo WHERE StudentID = @studentID";
                 cmd = new OleDbCommand(queryGetStudentName, myConn);
-
-                // Assuming you have a way to get the currently logged-in student's ID, 
-                // for this example, I'm using a placeholder value "12345"
 
                 cmd.Parameters.AddWithValue("@studentID", StudID);
 
@@ -110,7 +107,7 @@
         {
             string studName, itemName, itemType, itemDescription, dateFound, location;
             byte[] imageBytes = null;
-            string studentID = StudID; // Variable to hold the StudentID
+            string studentID = StudID; 
 
             studName = tbxName.Text;
             itemName = tbxItemName.Text;
@@ -128,8 +125,6 @@
                     throw new Exception("Please fill in all required fields.");
                 }
 
-
-                // Retrieve StudentID based on StudentName
                 string queryGetStudentID = "SELECT StudentID FROM StudentInfo WHERE StudentName = @studName";
                     cmd = new OleDbCommand(queryGetStudentID, myConn);
                     cmd.Parameters.AddWithValue("@studName", studName);
@@ -154,7 +149,7 @@
                     string query = "INSERT INTO FoundItem (StudentID, FoundBy, ItemName, ItemDescription, ItemType, DateFound, LocationFound, Status, Photo) " +
                         "VALUES (@studentID, @foundBy, @itemName, @description, @type, @date, @loc, @status, @photo)";
                     cmd = new OleDbCommand(query, myConn);
-                    cmd.Parameters.AddWithValue("@studentID", studentID); // Use the retrieved StudentID
+                    cmd.Parameters.AddWithValue("@studentID", studentID); 
                     cmd.Parameters.AddWithValue("@foundBy", studName);
                     cmd.Parameters.AddWithValue("@itemName", itemName);
                     cmd.Parameters.AddWithValue("@description", itemDescription);

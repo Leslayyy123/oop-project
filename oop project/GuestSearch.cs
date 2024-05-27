@@ -162,7 +162,7 @@ namespace oop_project
                 string itemType = lblItemType.Text;
                 string location = lblLocationFound.Text;
 
-                GuestRequest requestRetrievalForm = new GuestRequest(); // Pass the guestId
+                GuestRequest requestRetrievalForm = new GuestRequest(); 
 
                 requestRetrievalForm.SetItemDetails(itemName, itemDescription, itemType, location);
 

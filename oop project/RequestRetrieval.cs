@@ -51,10 +51,10 @@ namespace oop_project
             }
             return studentName;
         }
-    private void btnSubmit_Click(object sender, EventArgs e)
-{
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
             string studName, itemName, itemType, itemDescription, dateLost, location,
-                contactNum, course, yearLevel;
+                   contactNum, course, yearLevel;
             byte[] imageBytes = null;
 
             studName = tbxName.Text;
@@ -78,18 +78,6 @@ namespace oop_project
 
             try
             {
-                // Insert into StudentInfo table
-                string queryUpdateStudentInfo = "UPDATE StudentInfo SET Course = @course, YearLevel = @yearLevel WHERE StudentID = @studentID";
-                using (OleDbCommand cmdUpdateStudentInfo = new OleDbCommand(queryUpdateStudentInfo, myConn))
-                {
-                    cmdUpdateStudentInfo.Parameters.AddWithValue("@course", course);
-                    cmdUpdateStudentInfo.Parameters.AddWithValue("@yearLevel", yearLevel);
-                    cmdUpdateStudentInfo.Parameters.AddWithValue("@studentID", StudID);
-
-                    myConn.Open();
-                    cmdUpdateStudentInfo.ExecuteNonQuery();
-                }
-
                 if (!string.IsNullOrEmpty(pictureBox1.ImageLocation))
                 {
                     Image img = Image.FromFile(pictureBox1.ImageLocation);
@@ -97,25 +85,30 @@ namespace oop_project
                     imageBytes = (byte[])converter.ConvertTo(img, typeof(byte[]));
                 }
 
+                using (OleDbConnection myConn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Leslie\\OneDrive - Cebu Institute of Technology University\\Desktop\\Database2.mdb"))
+                {
+                    myConn.Open();
 
-                // Insert into RequestRetrieval table
-                string query = "INSERT INTO LostItem (StudentID, DateLost, LocationLost, StudentName, Course, YearLevel, ContactNum, ItemName, ItemDescription, ItemType, Status, Photo) " +
-                            "VALUES (@studentID, @dateLost, @lost, @owner, @course, @yr, @contact, @itemName, @description, @type, @status, @photo)";
-                cmd = new OleDbCommand(query, myConn);
-                cmd.Parameters.AddWithValue("@studentID", StudID);
-                cmd.Parameters.AddWithValue("@dateLost", dateLost);
-                cmd.Parameters.AddWithValue("@lost", location);
-                cmd.Parameters.AddWithValue("@owner", studName);
-                cmd.Parameters.AddWithValue("@course", course);
-                cmd.Parameters.AddWithValue("@yr", yearLevel);
-                cmd.Parameters.AddWithValue("@contact", contactNum);
-                cmd.Parameters.AddWithValue("@itemName", itemName);
-                cmd.Parameters.AddWithValue("@description", itemDescription);
-                cmd.Parameters.AddWithValue("@type", itemType);
-                cmd.Parameters.AddWithValue("@status", "PENDING");
-                cmd.Parameters.AddWithValue("@photo", imageBytes);
+                    string query = "INSERT INTO LostItem (StudentID, DateLost, LocationLost, StudentName, Course, YearLevel, ContactNumber, ItemName, ItemDescription, ItemType, Status, Photo) " +
+                                "VALUES (@studentID, @dateLost, @lost, @owner, @course, @yr, @contact, @itemName, @description, @type, @status, @photo)";
+                    using (OleDbCommand cmd = new OleDbCommand(query, myConn))
+                    {
+                        cmd.Parameters.AddWithValue("@studentID", StudID);
+                        cmd.Parameters.AddWithValue("@dateLost", dateLost);
+                        cmd.Parameters.AddWithValue("@lost", location);
+                        cmd.Parameters.AddWithValue("@owner", studName);
+                        cmd.Parameters.AddWithValue("@course", course);
+                        cmd.Parameters.AddWithValue("@yr", yearLevel);
+                        cmd.Parameters.AddWithValue("@contact", contactNum);
+                        cmd.Parameters.AddWithValue("@itemName", itemName);
+                        cmd.Parameters.AddWithValue("@description", itemDescription);
+                        cmd.Parameters.AddWithValue("@type", itemType);
+                        cmd.Parameters.AddWithValue("@status", "PENDING");
+                        cmd.Parameters.AddWithValue("@photo", imageBytes);
 
-                cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
 
                 MessageBox.Show("Submitted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -125,11 +118,8 @@ namespace oop_project
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                myConn.Close();
-            }
         }
+
 
         private void ShowDialogBox()
         {

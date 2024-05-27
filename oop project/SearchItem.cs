@@ -165,7 +165,7 @@ namespace oop_project
                 string itemType = lblItemType.Text;
                 string location = lblLocationFound.Text;
 
-                RequestRetrieval requestRetrievalForm = new RequestRetrieval(StudID); // Pass the selected StudentID
+                RequestRetrieval requestRetrievalForm = new RequestRetrieval(StudID); 
 
                 requestRetrievalForm.SetItemDetails(itemName, itemDescription, itemType);
 
