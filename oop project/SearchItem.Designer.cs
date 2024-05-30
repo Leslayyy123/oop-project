@@ -51,7 +51,6 @@
             dgvLostItem.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLostItem.Location = new Point(448, 120);
             dgvLostItem.Name = "dgvLostItem";
-            dgvLostItem.ReadOnly = true;
             dgvLostItem.RowHeadersWidth = 51;
             dgvLostItem.Size = new Size(1135, 468);
             dgvLostItem.TabIndex = 37;
@@ -118,7 +117,7 @@
             lblItemDescription.BackColor = Color.Transparent;
             lblItemDescription.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblItemDescription.ForeColor = Color.White;
-            lblItemDescription.Location = new Point(205, 284);
+            lblItemDescription.Location = new Point(205, 293);
             lblItemDescription.Name = "lblItemDescription";
             lblItemDescription.Size = new Size(0, 25);
             lblItemDescription.TabIndex = 75;
@@ -129,7 +128,7 @@
             lblItemType.BackColor = Color.Transparent;
             lblItemType.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblItemType.ForeColor = Color.White;
-            lblItemType.Location = new Point(127, 358);
+            lblItemType.Location = new Point(138, 367);
             lblItemType.Name = "lblItemType";
             lblItemType.Size = new Size(0, 25);
             lblItemType.TabIndex = 76;
@@ -140,7 +139,7 @@
             lblLocationFound.BackColor = Color.Transparent;
             lblLocationFound.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLocationFound.ForeColor = Color.White;
-            lblLocationFound.Location = new Point(200, 418);
+            lblLocationFound.Location = new Point(205, 444);
             lblLocationFound.Name = "lblLocationFound";
             lblLocationFound.Size = new Size(0, 25);
             lblLocationFound.TabIndex = 77;

@@ -55,19 +55,22 @@ namespace oop_project
 
                 dgvRequest.DataSource = dataTable;
 
-                dgvRequest.Columns.Remove("ItemType");
+                dgvRequest.Columns.Remove("ItemType");     
                 dgvRequest.Columns.Remove("ContactNumber");
 
+                // Remove existing "Show Photo" button column if it already exists
                 if (dgvRequest.Columns.Contains("btnShowPhoto"))
                 {
                     dgvRequest.Columns.Remove("btnShowPhoto");
                 }
 
+                // Remove "Photo" column
                 if (dgvRequest.Columns.Contains("Photo"))
                 {
                     dgvRequest.Columns.Remove("Photo");
                 }
 
+                // Add "Show Photo" button column
                 DataGridViewButtonColumn showPhotoButtonColumn = new DataGridViewButtonColumn();
                 showPhotoButtonColumn.HeaderText = "Photo";
                 showPhotoButtonColumn.Name = "btnShowPhoto";
@@ -97,6 +100,7 @@ namespace oop_project
                 dgvRequest.Columns.Remove("ContactNumber");
                 dgvRequest.Columns.Remove("ItemType");
 
+                // Remove existing "Show Photo" button column if it already exists
                 if (dgvRequest.Columns.Contains("btnShowPhoto"))
                 {
                     dgvRequest.Columns.Remove("btnShowPhoto");
@@ -107,6 +111,7 @@ namespace oop_project
                     dgvRequest.Columns.Remove("Photo");
                 }
 
+                // Add "Show Photo" button column
                 DataGridViewButtonColumn showPhotoButtonColumn = new DataGridViewButtonColumn();
                 showPhotoButtonColumn.HeaderText = "Photo";
                 showPhotoButtonColumn.Name = "btnShowPhoto";
@@ -348,7 +353,7 @@ namespace oop_project
                 {
                     if (!string.IsNullOrWhiteSpace(tbxSearch.Text) && tbxSearch.Text != "Search")
                     {
-                        string keyword = tbxSearch.Text.Trim().ToLower(); 
+                        string keyword = tbxSearch.Text.Trim().ToLower(); // Convert search text to lowercase
 
                         dataTable.DefaultView.RowFilter =
                             $"ItemName.ToLower() LIKE '%{keyword}%' OR " +
@@ -380,6 +385,7 @@ namespace oop_project
 
             tbxSearch.ForeColor = Color.White;
 
+            // Call ApplyFilter here
             ApplyFilter();
         }
 

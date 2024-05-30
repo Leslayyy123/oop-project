@@ -53,16 +53,19 @@ namespace oop_project
 
                 dgvItems.DataSource = dataTable;
 
+                // Remove existing "Show Photo" button column if it already exists
                 if (dgvItems.Columns.Contains("btnShowPhoto"))
                 {
                     dgvItems.Columns.Remove("btnShowPhoto");
                 }
 
+                // Remove "Photo" column
                 if (dgvItems.Columns.Contains("Photo"))
                 {
                     dgvItems.Columns.Remove("Photo");
                 }
 
+                // Add "Show Photo" button column
                 DataGridViewButtonColumn showPhotoButtonColumn = new DataGridViewButtonColumn();
                 showPhotoButtonColumn.HeaderText = "Photo";
                 showPhotoButtonColumn.Name = "btnShowPhoto";
@@ -89,16 +92,19 @@ namespace oop_project
 
                 dgvItems.DataSource = dataTable;
 
+                // Remove existing "Show Photo" button column if it already exists
                 if (dgvItems.Columns.Contains("btnShowPhoto"))
                 {
                     dgvItems.Columns.Remove("btnShowPhoto");
                 }
 
+                // Remove "Photo" column
                 if (dgvItems.Columns.Contains("Photo"))
                 {
                     dgvItems.Columns.Remove("Photo");
                 }
 
+                // Add "Show Photo" button column
                 DataGridViewButtonColumn showPhotoButtonColumn = new DataGridViewButtonColumn();
                 showPhotoButtonColumn.HeaderText = "Photo";
                 showPhotoButtonColumn.Name = "btnShowPhoto";
@@ -258,6 +264,7 @@ namespace oop_project
             }
             catch (Exception ex)
             {
+                // Handle the exception
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -271,7 +278,7 @@ namespace oop_project
 
             tbxSearch.ForeColor = Color.White;
 
-
+            // Call ApplyFilter here
             ApplyFilter();
         }
 

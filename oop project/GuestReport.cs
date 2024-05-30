@@ -34,6 +34,7 @@ namespace oop_project
             int currentNumber = guestNumbers[firstLetter];
             string customId = $"{firstLetter}{currentNumber:D3}";
 
+            // Increment the guest number for this first letter
             guestNumbers[firstLetter]++;
 
             return customId;
@@ -63,8 +64,10 @@ namespace oop_project
                 cmd.Parameters.AddWithValue("@Status", status);
                 cmd.Parameters.AddWithValue("@Photo", photo);
 
+                // Execute the insert command
                 cmd.ExecuteNonQuery();
 
+                // Retrieve the auto-generated ID
                 cmd.CommandText = "SELECT @@IDENTITY";
                 generatedId = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -113,8 +116,10 @@ namespace oop_project
                     imageBytes = (byte[])converter.ConvertTo(img, typeof(byte[]));
                 }
 
+                // Generate the custom ID
                 string customId = GenerateCustomId(studName);
 
+                // Call the InsertGuestReport method with the custom ID
                 int generatedId = InsertGuestReport(studName, itemName, itemDescription, itemType, dtpFound.Value, location, "UNCLAIMED", imageBytes, customId);
 
                 MessageBox.Show("Submitted Successfully with ID: " + generatedId, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

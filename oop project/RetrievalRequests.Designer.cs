@@ -53,7 +53,7 @@
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dgvRequest.DefaultCellStyle = dataGridViewCellStyle1;
-            dgvRequest.GridColor = Color.Black;
+            dgvRequest.GridColor = Color.MistyRose;
             dgvRequest.Location = new Point(297, 102);
             dgvRequest.Name = "dgvRequest";
             dgvRequest.ReadOnly = true;
@@ -163,7 +163,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "RetrievalRequests";
             Text = "RetrievalRequests";
-       //     Load += RetrievalRequests_Load;
+            Load += RetrievalRequests_Load;
             ((System.ComponentModel.ISupportInitialize)dgvRequest).EndInit();
             ResumeLayout(false);
             PerformLayout();
